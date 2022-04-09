@@ -26,7 +26,7 @@ body {
   align-content: center;
   justify-content: space-between;
   align-items: center;
-  background: url("./shelter/assets/images/start-screen-gradient-background.jpg")
+  background: url("/shelter//assets/images/start-screen-gradient-background.jpg")
     no-repeat;
   padding: 60px 40px;
 }
@@ -88,7 +88,7 @@ p {
   flex-direction: row;
   justify-content: space-between;
   align-content: flex-end;
-  background: url("./shelter/assets/images/start-screen-gradient-background.jpg")
+  background: url("/shelter//assets/images/start-screen-gradient-background.jpg")
     no-repeat;
   padding: 0 40px;
   background-position: top -180px center;
@@ -355,7 +355,7 @@ h3 {
 }
 .contacts {
   width: 1280px;
-  background: url("./shelter/assets/images/footer-gradient-background.png")
+  background: url("/shelter//assets/images/footer-gradient-background.png")
     no-repeat;
 }
 .contacts___container {
@@ -407,13 +407,13 @@ h3 {
 
 @font-face {
   font-family: "ArialRegular";
-  src: url(./shelter/assets/fonts/arial/arial-regular.ttf);
+  src: url(/shelter//assets/fonts/arial/arial-regular.ttf);
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(./shelter/assets/fonts/georgia/georgia-regular.ttf);
+  src: url(/shelter//assets/fonts/georgia/georgia-regular.ttf);
   font-style: normal;
   font-weight: 400;
 }
