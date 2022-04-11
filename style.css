@@ -17,8 +17,16 @@ body {
   margin: auto;
   max-width: var(--max-width);
 }
+header {
+  width: 100%;
+}
+main{
+  width: 100%;
+}
+footer {
+  width: 100%;
+}
 .page-header {
-  width: 1200px;
   height: 60px;
   display: flex;
   flex-wrap: wrap;
@@ -92,17 +100,19 @@ p {
     no-repeat;
   padding: 0 40px;
   background-position: top -180px center;
+  margin-top: -1px;
 }
 .not-only__container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
 }
 .title_container_one {
   width: 39%;
   padding-bottom: 81px;
+  justify-content: center;
 }
 .img-not-only__dog {
   width: 100%;
@@ -354,9 +364,9 @@ h3 {
   color: #b2b2b2;
 }
 .contacts {
-  width: 1280px;
   background: url("./assets/images/footer-gradient-background.png")
     no-repeat;
+    background-size: cover;
 }
 .contacts___container {
   display: flex;
@@ -416,4 +426,38 @@ h3 {
   src: url(./assets/fonts/georgia/georgia-regular.ttf);
   font-style: normal;
   font-weight: 400;
+}
+
+@media (max-width: 1279px) {
+  .page-header{
+    padding: 30px 30px 60px 30px;
+  }
+  .contacts___container{
+    justify-content: space-around;
+  }
+
+  .not-only-people {
+    flex-direction: column;
+    align-content: center;
+    background: url(./assets/images/start-screen-gradient-background-mob.jpg) no-repeat;
+    background-position: top -150px center;
+    background-size: cover;
+    padding: 0 100px;
+  }
+  .page-header{
+    background: url(./assets/images/start-screen-gradient-background-mob.jpg) no-repeat;
+    background-size: cover;
+  }
+  .title_container_one{
+    width: 100%;
+  }
+  h2{
+    padding: 0 54px;
+  }
+  .not-only__container__paragraph{
+    padding: 0 54px;
+  }
+  .not-only__container__btn{
+    margin: 29px 126px 0 180px;
+  }
 }
