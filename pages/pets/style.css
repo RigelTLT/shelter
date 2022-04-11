@@ -208,7 +208,7 @@ background: #f6f6f6;
 }
 .contacts {
   width: 1280px;
-  background: url("/assets/images/footer-gradient-background.png") no-repeat;
+  background: url("/shelte/assets/images/footer-gradient-background.png") no-repeat;
 }
 .contacts___container {
   display: flex;
@@ -262,13 +262,13 @@ background: #f6f6f6;
 
 @font-face {
   font-family: "ArialRegular";
-  src: url(/assets/fonts/arial/arial-regular.ttf);
+  src: url(/shelte/assets/fonts/arial/arial-regular.ttf);
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(/assets/fonts/georgia/georgia-regular.ttf);
+  src: url(/shelte/assets/fonts/georgia/georgia-regular.ttf);
   font-style: normal;
   font-weight: 400;
 }
