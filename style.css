@@ -522,7 +522,7 @@ h3 {
     align-content: center;
     padding: 0 100px;
   }
-  .h2{
+  h2{
     align-self: normal;
   }
   .title_container_one {
@@ -531,6 +531,9 @@ h3 {
   .not-only__container__btn {
     margin: 32px 0 0 0;
   }
+  .get-rest {
+    margin: 56px 0 100px 0;
+}
   .not-only__container{
     max-width: 100%;
   }
