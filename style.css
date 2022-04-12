@@ -427,9 +427,6 @@ h3 {
 }
 
 @media (max-width: 1279px) {
-  .page-header {
-    padding: 30px 30px 60px 30px;
-  }
   .contacts___container {
     justify-content: space-around;
   }
@@ -446,6 +443,7 @@ h3 {
     background: url(./assets/images/start-screen-gradient-background-mob.jpg)
       no-repeat;
     background-size: cover;
+    padding: 30px 30px 60px 30px;
   }
   .title_container_one {
     width: 39%;
@@ -459,9 +457,6 @@ h3 {
   }
   .not-only__container__paragraph {
     padding: 0 54px;
-  }
-  .img-not-only__dog {
-    margin: 19px 0 0 69px;
   }
   .about-the-shelter {
     flex-direction: column-reverse;
@@ -486,10 +481,12 @@ h3 {
   }
   .help-the-shelter__container {
     margin: 43px 9px 47px 9px;
+    width: 90%;
   }
   .help-the-shelter__container___item {
     width: 170px;
     padding: 0 30px 25px 30px;
+    width: 20%;
   }
   .you-make-donation___container {
     flex-direction: column-reverse;
@@ -515,8 +512,14 @@ h3 {
   .contacts___info {
     padding-top: 33px;
   }
+  .contact__container___item{
+    width: 40%;
+  }
 }
 @media (max-width: 768px) {
+  .img-not-only__dog {
+    margin: 19px 0 0 69px;
+}
   .not-only-people {
     flex-direction: column;
     align-content: center;
@@ -537,5 +540,15 @@ h3 {
   .not-only__container{
     max-width: 100%;
   }
-  
+  .help-the-shelter__container {
+    margin: 43px 9px 47px 9px;
+    width: auto;
+  }
+  .help-the-shelter__container___item {
+    width: 170px;
+    padding: 0 30px 25px 30px;
+  }
+  .contact__container___item{
+    width: auto;
+  }
 }

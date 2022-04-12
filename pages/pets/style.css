@@ -208,7 +208,7 @@ background: #f6f6f6;
 }
 .contacts {
   width: 1280px;
-  background: url("/shelter/assets/images/footer-gradient-background.png") no-repeat;
+  background: url("/assets/images/footer-gradient-background.png") no-repeat;
 }
 .contacts___container {
   display: flex;
@@ -262,13 +262,95 @@ background: #f6f6f6;
 
 @font-face {
   font-family: "ArialRegular";
-  src: url(/shelter/assets/fonts/arial/arial-regular.ttf);
+  src: url(/assets/fonts/arial/arial-regular.ttf);
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(/shelter/assets/fonts/georgia/georgia-regular.ttf);
+  src: url(/assets/fonts/georgia/georgia-regular.ttf);
   font-style: normal;
   font-weight: 400;
+}
+@media (max-width: 1279px) {
+  header{
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+  }
+  main{
+    margin-top: 120px;
+  }
+  footer{
+    width: 100%;
+  }
+  .page-header {
+    width: auto;
+    padding: 30px 30px 30px 30px;
+  }
+  .navbar{
+    margin: 16px 0 20px 0;
+    padding-left: 0;
+  }
+  .navbar__item {
+    margin: 0 0 0 36px;
+}
+.title-center{
+  margin: 80px 0 0 0;
+}
+.our-pets___container{
+  padding: 0 94px;
+  margin-top: 0;
+}
+.our-pets___container___item{
+  width: 40%;
+}
+.our-pets___container___item:nth-child(7), .our-pets___container___item:nth-child(8){
+  display: none;
+}
+.our-pets___navigation{
+  padding: 45px 0 76px 0;
+}
+}
+.contacts{
+  width: 100%;
+    background: url(/assets/images/footer-gradient-background.png) no-repeat;
+    background-size: cover;
+}
+.contacts___container {
+  justify-content: space-around;
+}
+.contacts___title {
+  padding: 0;
+}
+.contacts___container {
+  padding: 31px 33px 0 33px;
+}
+.contacts___background {
+  margin-top: 65px;
+}
+.email {
+  margin-bottom: 0;
+}
+.adress {
+  margin-bottom: 0;
+}
+.contacts___info {
+  padding-top: 33px;
+}
+.contact__container___item{
+  width: 40%;
+}
+@media (max-width: 768px) {
+  .contact__container___item{
+    width: auto;
+  }
+  .our-pets___container{
+    padding: 0 94px;
+    margin-top: 0;
+  }
+  .our-pets___container___item{
+    width: auto;
+  }
 }
