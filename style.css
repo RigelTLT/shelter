@@ -685,5 +685,156 @@ h3 {
   }
   .page-header{
     padding: 32px 53px 60px 10px;
+    background: url(./assets/images/start-screen-gradient-background320.jpg) no-repeat;
+    background-size: cover;
+  }
+  .not-only-people{
+    background: url(./assets/images/start-screen-gradient-background320.jpg) no-repeat;
+    background-position: top -150px center;
+    background-size: cover;
+  }
+  h2{
+    padding:0;
+    font-size: 25px;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+  .not-only__container__paragraph{
+    padding: 0 10px;
+    text-align: center;
+  }
+  .not-only__container__btn{
+    margin: 27px 0 0 0;
+  }
+  .title_container_one{
+    padding-bottom: 93px;
+  }
+  .img-not-only__dog{
+    width: 82%;
+    margin: 11px 0 0 49px;
+  }
+  .about-the-shelter__container__text___title{
+    font-size: 25px;
+    text-align: center;
+    padding-top: 41px;
+    padding-bottom: 3px;
+  }
+  .about-the-shelter__container__text__paragraph{
+    text-align: justify;
+    padding: 0 25px;
+  }
+  p{
+    margin: 22px 0;
+  }
+  .about-the-shelter__container{
+    text-align: center;
+  }
+  .img-about-pets{
+    width: 86%;
+    margin-top: 18px;
+    margin-bottom: 41px;
+  }
+  .title-center{
+    font-size: 25px;
+    margin-top: 42px;
+  }
+  .our-pets___container{
+    margin-top: 28px;
+    justify-content: space-evenly;
+  }
+  .container___item__btn{
+    padding: 12px 42px;
+  }
+  .our-pets___container___item:nth-child(3){
+    display: none;
+  }
+  .our-pets___container___item___navigation{
+    margin-top: 22px;
+  }
+  .our-pets___container___item___navigation:nth-child(1){
+    order: 1;
+  }
+  .our-pets___container___item___navigation:nth-child(5){
+    order: 2;
+    margin-left: 0px;
+  }
+  .get-rest{
+    margin: 41px 0 42px 0;
+  }
+  .title-support{
+    font-size: 15px;
+line-height: 110%;
+margin: 20px 0;
+  }
+  .help-the-shelter__container{
+    margin: 26px 15px 11px 15px;
+    justify-content:  space-between;
+  }
+  .help-the-shelter__container___item{
+    width: 130px;
+    padding: 0 0 9px 0;
+  }
+  .image-icons{
+    width: 40%;
+  }
+  .title-donats{
+    text-align: center;
+    font-size: 25px;
+  }
+  .you-make-donation___container{
+    padding: 28px 0 42px 0;
+  }
+  .you-make-donation__container__text__paragraph{
+    text-align: center;
+    line-height: 160%;
+    letter-spacing: 0;
+  }
+  .you-make-donation__container__card{
+    margin: 0 5px;
+  }
+  .credit-number{
+    font-size: 15px;
+line-height: 110%;
+  }
+  .you-make-donation__container__text__notes{
+    margin: 22px 5px;
+    text-align: justify;
+  }
+  .you-make-donation___container___item:nth-child(1){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .img-donats{
+    width: 90%;
+    margin:20px 0 0px 0;
+  }
+  .contacts___container{
+    padding: 30px 0 0 0;
+  }
+  .contact__container___item{
+    align-items: center;
+}
+  .contacts___title{
+    font-size: 25px;
+  }
+  .contacts___title br{
+    display: none;
+  }
+  .contacts___info{
+    padding-top: 39px;
+  }
+  .title___two{
+    padding: 40px 5px 0 5px;
+  }
+  .address___cental{
+    margin: 0 8px 0 19px;
+  }
+  .address___south{
+    margin: 0 31px 0 21px;
+  }
+  .contacts___background{
+    margin-top: 41px;
+    width: 86%;
   }
 }
