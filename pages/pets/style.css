@@ -125,9 +125,11 @@ h3 {
 }
 .our-pets___navigation___item:hover {
   background: #fddcc4;
+  border: 2px solid #fddcc4;
 }
 .navigation__active{
     background: #fddcc4;
+    border: 2px solid #fddcc4;
 }
 .navigation__disabled{
     margin: 0 10px;
