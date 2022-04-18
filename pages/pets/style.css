@@ -348,9 +348,6 @@ h3 {
   .contact__container___item {
     width: 40%;
   }
-  .contact__container___item {
-    width: auto;
-  }
   .our-pets___container___item {
     margin-left:calc((50% - 270px) / 2);
     margin-right:calc((50% - 270px) / 2);
