@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cozy House</title>
     <link rel="stylesheet" href="./style.css" />
+    
   </head>
   <body>
     <div class="wrapper">
@@ -16,8 +17,8 @@
             <p class="logo_subtitle">Shelter for pets in Boston</p>
           </a>            
           <nav class="nav">
-            
             <input id="menu-toggle" type="checkbox" />
+            <div class="background-menu"></div>
             <label class="menu-btn" for="menu-toggle">
               <span></span>
             </label>
@@ -27,16 +28,16 @@
                 <p class="logo_subtitle__menu">Shelter for pets in Boston</p>
               </a>  
               <li class="navbar__item active">
-                <a href="#about-the-shelter">About the shelter</a>
+                <a class="link__about-the-shelter" href="#">About the shelter</a>
               </li>
               <li class="navbar__item">
                 <a  href="./pages/pets/Index.html">Our pets</a>
               </li>
               <li class="navbar__item">
-                <a href="#help-the-shelter">Help the shelter</a>
+                <a class="link__help-the-shelter" href="#help-the-shelter">Help the shelter</a>
               </li>
               <li class="navbar__item">
-                <a href="#contacts">Contacts</a>
+                <a class="link__contacts" href="#contacts">Contacts</a>
               </li>
             </ul>
           </nav>
@@ -51,7 +52,7 @@
               extremely wide and open heart. He or she will love you more than
               anybody else in the world, you will see!
             </p>
-            <a href="#our-pets" class="not-only__container__btn">Make a friend</a>
+            <a href="./pages/pets/Index.html" class="not-only__container__btn">Make a friend</a>
           </div>
           <div class="not-only__container">
             <img
@@ -105,7 +106,7 @@
                 alt="katrine"
                 class="image-pets"
               />
-              <p class="title-pets">Katrine</p>
+              <p class="title-pets slider-pets">Katrine</p>
               <button class="container___item__btn">Learn more</button>
             </div>
             <div class="our-pets___container___item">
@@ -114,7 +115,7 @@
                 alt="Jennifer"
                 class="image-pets"
               />
-              <p class="title-pets">Jennifer</p>
+              <p class="title-pets slider-pets">Jennifer</p>
               <button class="container___item__btn">Learn more</button>
             </div>
             <div class="our-pets___container___item">
@@ -123,7 +124,7 @@
                 alt="Woody"
                 class="image-pets"
               />
-              <p class="title-pets">Woody</p>
+              <p class="title-pets slider-pets">Woody</p>
               <button class="container___item__btn">Learn more</button>
             </div>
             <div class="our-pets___container___item___navigation">
@@ -279,5 +280,6 @@
         </section>
       </footer>
     </div>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

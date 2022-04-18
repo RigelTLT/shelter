@@ -58,6 +58,14 @@ p {
 .nav {
   margin-left: auto;
 }
+.background-menu{
+  background: none;
+  position: static;
+  height: auto;
+  width: auto;
+  top: 0;
+  left: 0;
+}
 #menu-toggle {
   display: none;
 }
@@ -468,6 +476,14 @@ h3 {
   }
   #menu-toggle:checked ~ .menu-btn {
     position: fixed;
+  }
+  #menu-toggle:checked ~ .background-menu {
+    background: #00000099;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
   }
   .our-pets___container {
     padding: 0 25px;
