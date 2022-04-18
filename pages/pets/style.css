@@ -451,17 +451,15 @@ h3 {
   }
 
   #menu-toggle:checked ~ .menu-btn > span {
-    transform: rotate(45deg);
+    transform: rotate(90deg);
     background-color: #f1cdb3;
   }
   #menu-toggle:checked ~ .menu-btn > span::before {
-    top: 0;
     transform: rotate(0);
     background-color: #f1cdb3;
   }
   #menu-toggle:checked ~ .menu-btn > span::after {
-    top: 0;
-    transform: rotate(90deg);
+    transform: rotate(0);
     background-color: #f1cdb3;
   }
   #menu-toggle:checked ~ .navbar {
