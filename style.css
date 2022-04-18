@@ -544,9 +544,6 @@ h3 {
     margin: 43px 9px 47px 9px;
     width: auto;
   }
-  .contact__container___item {
-    width: auto;
-  }
 }
 @media (max-width: 767px) {
   .menu-btn {
