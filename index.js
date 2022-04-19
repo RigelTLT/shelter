@@ -20,6 +20,7 @@ function removeElements(arr, arrCheck) {
     return !arrCheck.includes(index);
   });
 }
+
 function changeImagesPets() {
   let titlePets = document.querySelectorAll(".slider-pets");
   let imagesPets = document.querySelectorAll(".image-pets");
@@ -38,18 +39,49 @@ function changeImagesPets() {
       totalArr.push([index.name, index.img]);
     }
   });
-  titlePets.forEach(function (elem, index){
-   /* elem.style.opacity = 0;
-    elem.style.cssText += 'transition: opacity 0.4s';*/
+  titlePets.forEach(function (elem, index) {
+    elem.style.opacity = 0;
+    elem.style.cssText += "transition: all 0.4s";
     elem.innerHTML = totalArr[index][0];
+    setTimeout(function animationImages() {
+      elem.style.opacity += 1;
+      elem.style.cssText += "transition: all 0.4s";
+    }, 500);
   });
-  imagesPets.forEach((elem, index) => (elem.src = totalArr[index][1]));
+  imagesPets.forEach(function (elem, index) {
+    elem.style.opacity = 0;
+    elem.style.cssText += "transition: all 0.4s";
+    elem.src = totalArr[index][1];
+    setTimeout(function animationImages() {
+      elem.style.opacity += 1;
+      elem.style.cssText += "transition: all 0.4s";
+    }, 500);
+  });
 }
-
+function openModal() {
+  document.querySelector(".background-module").style.display = "flex";
+  document.querySelector("body").style.overflow = "hidden";
+}
+function closeModal(event) {
+  if (
+    event.target.classList.contains("background-module") ||
+    event.target.classList.contains("svg-icon__close") |
+      event.target.classList.contains("btn-close-module")
+  ) {
+    document.querySelector(".background-module").style.display = "none";
+    document.querySelector("body").style.overflow = "auto";
+  }
+}
 const linkHelpTheShelter = document.querySelector(".link__help-the-shelter");
 const linkContacts = document.querySelector(".link__contacts");
 const linkAboutTheShelter = document.querySelector(".link__about-the-shelter");
-const navigationButtons = document.querySelectorAll(".our-pets___container___item___navigation");
+const navigationButtons = document.querySelectorAll(
+  ".our-pets___container___item___navigation"
+);
+const itemButton = document.querySelectorAll(".our-pets___container___item");
+const backgroundModule = document.querySelector(".background-module");
+
+const closeButton = document.querySelector(".btn-close-module");
 linkHelpTheShelter.classList.add("disabled");
 linkContacts.classList.add("disabled");
 
@@ -57,3 +89,6 @@ linkAboutTheShelter.addEventListener("click", closeMenu);
 document.querySelector(".background-menu").addEventListener("click", closeMenu);
 navigationButtons[0].addEventListener("click", changeImagesPets);
 navigationButtons[1].addEventListener("click", changeImagesPets);
+itemButton.forEach((index) => index.addEventListener("click", openModal));
+closeButton.addEventListener("click", closeModal);
+backgroundModule.addEventListener("click", closeModal);
