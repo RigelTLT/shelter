@@ -653,7 +653,7 @@ color: #F1CDB3;
   }
   .module{
     width: 630px;
-    height: 350px;
+    height: auto;
   }
   .module__img{
     width: 59%;
@@ -954,6 +954,7 @@ color: #F1CDB3;
   }
   .contact__container___item {
     align-items: center;
+    width: auto;
   }
   .contacts___title {
     font-size: 25px;
@@ -982,7 +983,7 @@ color: #F1CDB3;
   }
   .module {
     width: 240px;
-    height: 341px;
+    height: auto;
 }
 .module__info {
    width: 100%; 
