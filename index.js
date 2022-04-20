@@ -58,7 +58,28 @@ function changeImagesPets() {
     }, 500);
   });
 }
-function openModal() {
+function openModal(event) {
+  let namePet = "";
+  if(event.path[0].classList.contains("our-pets___container___item")){
+    namePet = event.path[0].querySelector(".slider-pets").textContent;
+  }
+  else{
+    namePet = event.path[1].querySelector(".slider-pets").textContent;
+  }
+  console.log(namePet);
+  pets.forEach(function(index) {
+    if(namePet === index.name){
+      document.querySelector(".pet-info__img").src = index.img;
+      document.querySelector(".pet-info__title").textContent = index.name;
+      document.querySelector(".pet-info__type").textContent = index.type;
+      document.querySelector(".pet-info__breed").textContent = index.breed;
+      document.querySelector(".pet-info__description").textContent = index.description;
+      document.querySelector(".pet-info__age").textContent = index.age;
+      document.querySelector(".pet-info__inoculations").textContent = index.inoculations;
+      document.querySelector(".pet-info__diseases").textContent = index.diseases;
+      document.querySelector(".pet-info__parasites").textContent = index.parasites;
+    }
+  });
   document.querySelector(".background-module").style.display = "flex";
   document.querySelector("body").style.overflow = "hidden";
 }
