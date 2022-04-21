@@ -17,6 +17,10 @@ body {
   margin: auto;
   max-width: var(--max-width);
 }
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  }
 .page-header {
   width: 1200px;
   height: 60px;
@@ -57,6 +61,14 @@ p {
 }
 .nav {
   margin-left: auto;
+}
+.background-menu{
+  background: none;
+  position: static;
+  height: auto;
+  width: auto;
+  top: 0;
+  left: 0;
 }
 #menu-toggle {
   display: none;
@@ -216,7 +228,7 @@ h3 {
 }
 .contacts {
   width: 1280px;
-  background: url("/shelter/assets/images/footer-gradient-background.png") no-repeat;
+  background: url("../../assets/images/footer-gradient-background.png") no-repeat;
 }
 .contacts___container {
   display: flex;
@@ -267,16 +279,112 @@ h3 {
 .adress {
   margin-bottom: 40px;
 }
-
+.background-module{
+  background:  rgba(41, 41, 41, 0.6);
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.container-module{
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.btn-close-module{
+  display: flex;
+    justify-content: center;
+    align-content: center;
+  width: 52px;
+height: 52px;
+margin-left: calc(100% + 52px);
+margin-right: 18px;
+border: 2px solid #F1CDB3;
+box-sizing: border-box;
+border-radius: 100px;
+cursor: pointer;
+}
+.svg-icon__close{
+  width: 12px;
+}
+.module{
+  width: 900px;
+  background: #FAFAFA;
+border-radius: 9px;
+  display: flex;
+    flex-direction: row;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+.module__img{
+  width: 55%;
+}
+.pet-info__img{
+  width: 100%;
+}
+.module__info{
+  width: 40%;
+    margin:  5% 0% 0 4%;
+}
+.pet-info__title{
+  font-family: var(--title-font);
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 130%;
+letter-spacing: 0.06em;
+margin: 0 0 10px 0;
+}
+.pet-info__h5{
+  font-family: var(--title-font);
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 115%;
+letter-spacing: 0.06em;
+}
+.pet-info__description{
+  font-family: var(--title-font);
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 110%;
+letter-spacing: 0.06em;
+margin:  42px 6px 43px 0;
+}
+.pet-info__item{
+  font-family: var(--title-font);
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 114%;
+letter-spacing: 0.12em;
+margin: 11px 0;
+color: #F1CDB3;
+}
+.pet-info__info{
+  padding: 0 0 0 15px;
+}
+.pet-info__item span{
+  color: #000;
+}
+.pet-info__caption{
+  font-weight: 700;
+}
 @font-face {
   font-family: "ArialRegular";
-  src: url(/shelter/assets/fonts/arial/arial-regular.ttf);
+  src: url(../../assets/fonts/arial/arial-regular.ttf);
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "Georgia";
-  src: url(/shelter/assets/fonts/georgia/georgia-regular.ttf);
+  src: url(../../assets/fonts/georgia/georgia-regular.ttf);
   font-style: normal;
   font-weight: 400;
 }
@@ -321,7 +429,7 @@ h3 {
 
   .contacts {
     width: 100%;
-    background: url(/shelter/assets/images/footer-gradient-background.png) no-repeat;
+    background: url(../../assets/images/footer-gradient-background.png) no-repeat;
     background-size: cover;
   }
   .contacts___container {
@@ -351,6 +459,31 @@ h3 {
   .our-pets___container___item {
     margin-left:calc((50% - 270px) / 2);
     margin-right:calc((50% - 270px) / 2);
+  }
+  .module{
+    width: 630px;
+    height: auto;
+  }
+  .module__img{
+    width: 59%;
+  }
+  .module__info{
+    width: 45%;
+    margin:  2% 0% 0 2%;
+  }
+  .pet-info__title{
+    margin: 0 0 7px 0;
+  }
+  .pet-info__description{
+    font-size: 13px;
+    margin: 22px 6px 17px 0;
+  }
+  .pet-info__info{
+    margin: 0;
+  }
+  .pet-info__item{
+    margin: 6px 0;
+    letter-spacing: 0.09em;
   }
 }
 @media (max-width: 768px) {
@@ -469,6 +602,14 @@ h3 {
   #menu-toggle:checked ~ .menu-btn {
     position: fixed;
   }
+  #menu-toggle:checked ~ .background-menu {
+    background: #00000099;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
   .our-pets___container {
     padding: 0 25px;
     margin-top: 10px;
@@ -512,6 +653,7 @@ h3 {
   }
   .contact__container___item {
     align-items: center;
+    width: auto;
   }
   .contacts___title {
     font-size: 25px;
@@ -536,4 +678,29 @@ h3 {
     margin-top: 41px;
     width: 86%;
   }
+  .module__img{
+    display: none;
+  }
+  .module {
+    width: 240px;
+    height: auto;
+}
+.module__info {
+   width: 100%; 
+   margin: 0 10px 0 10px;
+   text-align: center; 
+}
+.pet-info__title{
+  margin: 10px 0 8px 0;
+}
+.pet-info__description{
+  text-align: justify;
+  margin: 20px 0px 24px 0;
+}
+.pet-info__info{
+  text-align: justify;
+}
+.btn-close-module{
+  margin-left: calc(100% + 30px);
+}
 }
