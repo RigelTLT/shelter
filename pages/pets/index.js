@@ -5,13 +5,11 @@ function closeMenu() {
 }
 preloadImages(); 
 function preloadImages() {
-  for (let i = 1; i <= 9; i++) {
     const img = new Image();
     const seasons = ["charly", "freddie", "jennifer", "katrine", "scarlett", "sophia", "timmy", "woody"];
     seasons.forEach(
-      (indexSeasons) => (img.src = `../../assets/images/pets/${indexSeasons}/${i}.png`)
+      (indexSeasons) => (img.src = `../../assets/images/pets/${indexSeasons}.png`)
     );
-  }
 }
 function openModal(event) {
   let namePet = "";
