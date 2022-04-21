@@ -3,7 +3,16 @@ import petsList from "../../pets list.json" assert { type: "json" };
 function closeMenu() {
   document.querySelector("#menu-toggle").click();
 }
-
+preloadImages(); 
+function preloadImages() {
+  for (let i = 1; i <= 9; i++) {
+    const img = new Image();
+    const seasons = ["charly", "freddie", "jennifer", "katrine", "scarlett", "sophia", "timmy", "woody"];
+    seasons.forEach(
+      (indexSeasons) => (img.src = `../../assets/images/pets/${indexSeasons}/${i}.png`)
+    );
+  }
+}
 function openModal(event) {
   let namePet = "";
   if(event.path[0].classList.contains("our-pets___container___item")){
