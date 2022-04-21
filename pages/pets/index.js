@@ -6,9 +6,9 @@ function closeMenu() {
 preloadImages(); 
 function preloadImages() {
     const img = new Image();
-    const seasons = ["charly", "freddie", "jennifer", "katrine", "scarlett", "sophia", "timmy", "woody"];
-    seasons.forEach(
-      (indexSeasons) => (img.src = `../../assets/images/pets/${indexSeasons}.png`)
+    const pets = ["charly", "freddie", "jennifer", "katrine", "scarlett", "sophia", "timmy", "woody"];
+    pets.forEach(
+      (indexPets) => (img.src = `../../assets/images/pets/${indexPets}.png`)
     );
 }
 function openModal(event) {
