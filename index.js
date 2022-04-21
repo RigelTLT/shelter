@@ -51,7 +51,7 @@ function changeImagesPets() {
   titlePets.forEach(function (elem, index) {
     elem.style.opacity = 0;
     elem.style.cssText += "transition: all 0.4s";
-    elem.innerHTML = totalArr[index][0].splice(4);
+    elem.innerHTML = totalArr[index][0];
     setTimeout(function animationImages() {
       elem.style.opacity += 1;
       elem.style.cssText += "transition: all 0.4s";
@@ -60,7 +60,7 @@ function changeImagesPets() {
   imagesPets.forEach(function (elem, index) {
     elem.style.opacity = 0;
     elem.style.cssText += "transition: all 0.4s";
-    elem.src = totalArr[index][1];
+    elem.src = totalArr[index][1].slice(4);
     setTimeout(function animationImages() {
       elem.style.opacity += 1;
       elem.style.cssText += "transition: all 0.4s";
