@@ -184,10 +184,7 @@ h3 {
   background: #fafafa;
   border-radius: 9px;
 }
-.our-pets___container___item:hover {
-  background: #ffffff;
-  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
-}
+
 .our-pets___container___item:hover .container___item__btn {
   background: #fddcc4;
 }
@@ -197,6 +194,7 @@ h3 {
 .our-pets___container___item___navigation:last-child {
   margin-left: 53px;
 }
+
 .image-pets {
   width: 270px;
   height: 270px;
