@@ -5,9 +5,9 @@ function closeMenu() {
 preloadImages(); 
 function preloadImages() {
     const img = new Image();
-    const seasons = ["charly", "freddie", "jennifer", "katrine", "scarlett", "sophia", "timmy", "woody"];
-    seasons.forEach(
-      (indexSeasons) => (img.src = `./assets/images/pets/${indexSeasons}.png`)
+    const pets = ["charly", "freddie", "jennifer", "katrine", "scarlett", "sophia", "timmy", "woody"];
+    pets.forEach(
+      (indexPets) => (img.src = `./assets/images/pets/${indexPets}.png`)
     );
 }
 
@@ -51,7 +51,7 @@ function changeImagesPets() {
   titlePets.forEach(function (elem, index) {
     elem.style.opacity = 0;
     elem.style.cssText += "transition: all 0.4s";
-    elem.innerHTML = totalArr[index][0];
+    elem.innerHTML = totalArr[index][0].splice(4);
     setTimeout(function animationImages() {
       elem.style.opacity += 1;
       elem.style.cssText += "transition: all 0.4s";
