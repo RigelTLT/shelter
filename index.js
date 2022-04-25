@@ -65,55 +65,6 @@ function closeModal(event) {
     document.querySelector("body").style.overflow = "auto";
   }
 }
-const linkHelpTheShelter = document.querySelector(".link__help-the-shelter");
-const linkContacts = document.querySelector(".link__contacts");
-const linkAboutTheShelter = document.querySelector(".link__about-the-shelter");
-const navigationButtons = document.querySelectorAll(
-  ".our-pets___container___item___navigation"
-);
-const itemButton = document.querySelectorAll(".our-pets___container___item");
-const backgroundModule = document.querySelector(".background-module");
-const CAROUSEL  = document.querySelector(".carousel");
-const closeButton = document.querySelector(".btn-close-module");
-linkHelpTheShelter.classList.add("disabled");
-linkContacts.classList.add("disabled");
-
-linkAboutTheShelter.addEventListener("click", closeMenu);
-document.querySelector(".background-menu").addEventListener("click", closeMenu);
-
-itemButton.forEach((index) => index.addEventListener("click", openModal));
-closeButton.addEventListener("click", closeModal);
-backgroundModule.addEventListener("click", closeModal);
-
-navigationButtons[0].addEventListener("click", carouselLeft);
-navigationButtons[1].addEventListener("click", carouselRigth);
-
-CAROUSEL.addEventListener("animationend", (AnimationEvent) => {
-  
-  let titlePets = document.querySelectorAll(".active-carousel .slider-pets");
-  let imagesPets = document.querySelectorAll(".active-carousel .image-pets");
-  let titlePetsMove = '';
-  let imagesPetsMove = '';
-  if(AnimationEvent.animationName === "move-left"){
-  titlePetsMove = document.querySelectorAll(".left-carousel .slider-pets");
-  imagesPetsMove = document.querySelectorAll(".left-carousel .image-pets");
-  }
-  else{
-    titlePetsMove = document.querySelectorAll(".rigth-carousel .slider-pets");
-    imagesPetsMove = document.querySelectorAll(".rigth-carousel .image-pets");
-  }
-  titlePets.forEach((elem, index) => {
-    titlePets[index].innerHTML = titlePetsMove[index].innerHTML ;
-  })
-  imagesPets.forEach((elem, index) => {
-    imagesPets[index].src = imagesPetsMove[index].src ;
-  })
-  CAROUSEL.classList.remove("transition-left");
-  CAROUSEL.classList.remove("transition-rigth");
-  navigationButtons[0].addEventListener("click", carouselLeft);
-  navigationButtons[1].addEventListener("click", carouselRigth);
-})
-
 function carouselLeft(){
   navigationButtons[0].removeEventListener("click", carouselLeft);
   CAROUSEL.classList.add("transition-left");
@@ -168,3 +119,55 @@ function carouselRigth(){
     elem.src = totalArr[index][1].slice(4);
   }); 
 }
+const linkHelpTheShelter = document.querySelector(".link__help-the-shelter");
+const linkContacts = document.querySelector(".link__contacts");
+const linkAboutTheShelter = document.querySelector(".link__about-the-shelter");
+const navigationButtons = document.querySelectorAll(
+  ".our-pets___container___item___navigation"
+);
+const itemButton = document.querySelectorAll(".our-pets___container___item");
+const backgroundModule = document.querySelector(".background-module");
+const CAROUSEL  = document.querySelector(".carousel");
+const closeButton = document.querySelector(".btn-close-module");
+/*linkHelpTheShelter.classList.add("disabled");
+linkContacts.classList.add("disabled");*/
+
+linkAboutTheShelter.addEventListener("click", closeMenu);
+document.querySelector(".background-menu").addEventListener("click", closeMenu);
+
+itemButton.forEach((index) => index.addEventListener("click", openModal));
+closeButton.addEventListener("click", closeModal);
+backgroundModule.addEventListener("click", closeModal);
+
+navigationButtons[0].addEventListener("click", carouselLeft);
+navigationButtons[1].addEventListener("click", carouselRigth);
+
+CAROUSEL.addEventListener("animationend", (AnimationEvent) => {
+  
+  let titlePets = document.querySelectorAll(".active-carousel .slider-pets");
+  let imagesPets = document.querySelectorAll(".active-carousel .image-pets");
+  let titlePetsMove = '';
+  let imagesPetsMove = '';
+  if(AnimationEvent.animationName === "move-left"){
+  titlePetsMove = document.querySelectorAll(".left-carousel .slider-pets");
+  imagesPetsMove = document.querySelectorAll(".left-carousel .image-pets");
+  }
+  else{
+    titlePetsMove = document.querySelectorAll(".rigth-carousel .slider-pets");
+    imagesPetsMove = document.querySelectorAll(".rigth-carousel .image-pets");
+  }
+  titlePets.forEach((elem, index) => {
+    titlePets[index].innerHTML = titlePetsMove[index].innerHTML ;
+  })
+  imagesPets.forEach((elem, index) => {
+    imagesPets[index].src = imagesPetsMove[index].src ;
+  })
+  CAROUSEL.classList.remove("transition-left");
+  CAROUSEL.classList.remove("transition-rigth");
+  navigationButtons[0].addEventListener("click", carouselLeft);
+  navigationButtons[1].addEventListener("click", carouselRigth);
+})
+document.querySelector("#menu-toggle").addEventListener("change", function() {
+  let body = document.querySelector("body");
+  body.style.overflow = (body.style.overflow == "hidden") ? "auto" : "hidden";
+})

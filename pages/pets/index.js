@@ -269,10 +269,10 @@ function fowardUp(event){
         }
         let stop = 8;
         if(screenWidth<726){
-            stop = 6;
+            stop = 3;
         }
         if(726<=screenWidth && screenWidth<1280){
-            stop = 3;
+            stop = 6;
         }
         let start = 0;
         if(event.target.classList.contains("navigation__disabled")){
@@ -326,8 +326,8 @@ const backButton = document.querySelector(".back");
 const backButtonUp = document.querySelector(".back-all");
 
 const closeButton = document.querySelector(".btn-close-module");
-linkHelpTheShelter.classList.add("disabled");
-linkContacts.classList.add("disabled");
+/*linkHelpTheShelter.classList.add("disabled");
+linkContacts.classList.add("disabled");*/
 
 linkOurPets.addEventListener("click", closeMenu);
 document.querySelector(".background-menu").addEventListener("click", closeMenu);
@@ -338,4 +338,7 @@ fowardButton.addEventListener("click", foward);
 fowardButtonUp.addEventListener("click", fowardUp);
 backButton.addEventListener("click", back);
 backButtonUp.addEventListener("click", backUp);
-
+document.querySelector("#menu-toggle").addEventListener("change", function() {
+  let body = document.querySelector("body");
+  body.style.overflow = (body.style.overflow == "hidden") ? "auto" : "hidden";
+})
