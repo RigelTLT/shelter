@@ -69,6 +69,7 @@ p {
   width: auto;
   top: 0;
   left: 0;
+  z-index: 100;
 }
 #menu-toggle {
   display: none;
@@ -79,6 +80,7 @@ p {
   align-content: center;
   justify-content: flex-end;
   flex-wrap: wrap;
+  z-index: 102;
 }
 .navbar__item {
   margin: 0 0 0 36px;
@@ -287,6 +289,7 @@ h3 {
     display: none;
     align-items: center;
     justify-content: center;
+    z-index: 1000;
 }
 .container-module{
   display: flex;
@@ -306,7 +309,9 @@ margin-right: 18px;
 border: 2px solid #F1CDB3;
 box-sizing: border-box;
 border-radius: 100px;
-cursor: pointer;
+}
+.btn-close-module:hover{
+  background-color:#F1CDB3;
 }
 .svg-icon__close{
   width: 12px;
@@ -500,7 +505,7 @@ color: #F1CDB3;
     width: 30px;
     height: 22px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 105;
     margin: 51px 53px 0 0;
   }
 
