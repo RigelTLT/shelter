@@ -121,7 +121,7 @@ function carouselRigth(){
 }
 const linkHelpTheShelter = document.querySelector(".link__help-the-shelter");
 const linkContacts = document.querySelector(".link__contacts");
-const linkAboutTheShelter = document.querySelector(".link__about-the-shelter");
+const linkMenu = document.querySelectorAll(".navbar__item a");
 const navigationButtons = document.querySelectorAll(
   ".our-pets___container___item___navigation"
 );
@@ -131,8 +131,10 @@ const CAROUSEL  = document.querySelector(".carousel");
 const closeButton = document.querySelector(".btn-close-module");
 /*linkHelpTheShelter.classList.add("disabled");
 linkContacts.classList.add("disabled");*/
+linkMenu.forEach((elem) =>{
+  elem.addEventListener("click", closeMenu);
+})
 
-linkAboutTheShelter.addEventListener("click", closeMenu);
 document.querySelector(".background-menu").addEventListener("click", closeMenu);
 
 itemButton.forEach((index) => index.addEventListener("click", openModal));

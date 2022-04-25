@@ -317,7 +317,7 @@ function fowardUp(event){
         }
 const linkHelpTheShelter = document.querySelector(".link__help-the-shelter");
 const linkContacts = document.querySelector(".link__contacts");
-const linkOurPets = document.querySelector(".link__Our-pets");
+const linkMenu = document.querySelectorAll(".navbar__item a");
 const fowardButton = document.querySelector(".forward");
 const fowardButtonUp = document.querySelector(".forward-all");
 const itemButton = document.querySelectorAll(".our-pets___container___item");
@@ -329,7 +329,9 @@ const closeButton = document.querySelector(".btn-close-module");
 /*linkHelpTheShelter.classList.add("disabled");
 linkContacts.classList.add("disabled");*/
 
-linkOurPets.addEventListener("click", closeMenu);
+linkMenu.forEach((elem) =>{
+  elem.addEventListener("click", closeMenu);
+})
 document.querySelector(".background-menu").addEventListener("click", closeMenu);
 itemButton.forEach((index) => index.addEventListener("click", openModal));
 closeButton.addEventListener("click", closeModal);
