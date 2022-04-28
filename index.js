@@ -41,7 +41,7 @@ function openModal(event) {
   console.log(namePet);
   pets.forEach(function(index) {
     if(namePet === index.name){
-      document.querySelector(".pet-info__img").src = index.img;
+      document.querySelector(".pet-info__img").src = index.img.slice(4);
       document.querySelector(".pet-info__title").textContent = index.name;
       document.querySelector(".pet-info__type").textContent = index.type;
       document.querySelector(".pet-info__breed").textContent = index.breed;
